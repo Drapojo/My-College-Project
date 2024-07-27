@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Invoice</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                max-width: 800px;
+                margin: auto;
+                background-color: #f8f8f8;
+            }
+            .container {
+                padding: 20px;
+                background-color: white;
+                margin-top: 20px;
+                border-radius: 10px;
+            }
+            .header {
+                text-align: left;
+                border-bottom: 2px solid crimson;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+            .store-info {
+                color: crimson;
+            }
+            .store-info .store-title {
+                margin-bottom: 5px;
+            }
+            .store-info .contact-info {
+                margin-bottom: 5px;
+            }
+            .store-info .contact-info div {
+                margin-bottom: 2px;
+            }
+            .order-number {
+                font-weight: bold;
+                font-size: 50px;
+                color: crimson;
+                text-align: center;
+            }
+            .customer-info, .order-info {
+                margin-bottom: 20px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 1px solid crimson;
+            }
+            th {
+                background-color: crimson;
+                color: white;
+                padding: 10px;
+                text-align: center;
+            }
+            td {
+                padding: 8px;
+                text-align: left;
+            }
+            .total {
+                font-weight: bold;
+                text-align: right;
+                font-size: 18px;
+                margin-top: 20px;
+            }
+            .actions {
+                text-align: right;
+                color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="store-info">
+                    <div class="store-title"><strong>Linh and Associates Store</strong></div>
+                    <div class="contact-info">
+                        <div>Address: FPT University HL</div>
+                        <div>Phone: 123456789</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-number">
+                Order
+            </div>
+            <div class="actions" style="text-align: center;">
+                Date: {date}
+            </div>
+            <div class="customer-info">
+                <strong>CUSTOMER INFORMATION</strong><hr/>
+                <p>Customer Name: {name}
+                    <br/>Phone: {phone}
+                </p>
+            </div>
+            <div class="order-info">
+                <strong>ORDER INFORMATION</strong><hr/>
+                <p>Order ID: {orderID}</p>
+                <p>Product List</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 3%;">No.</th>
+                            <th style="width: 47%;">Product Name</th>
+                            <th style="width: 15%;">Unit Price</th>
+                            <th style="width: 15%;">Quantity</th>
+                            <th style="width: 30%;">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {orderList}
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Asus TUF Gaming A15 Laptop</td>
+                            <td style="text-align: right;">56,000</td>
+                            <td style="text-align: right;">3</td>
+                            <td style="text-align: right;">168,000</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="total">
+                Total Amount: {total} VND
+            </div>
+        </div>
+    </body>
+</html>
