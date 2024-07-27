@@ -10,9 +10,9 @@ package LoginGoogle;
  */
 public class PrivateInfo {
 
-    public static String GOOGLE_CLIENT_ID = "713098932367-stfph64pqcvd0hk2aer3kt7u8crlff48.apps.googleusercontent.com";
+    public static String GOOGLE_CLIENT_ID = "";
 
-    public static String GOOGLE_CLIENT_SECRET = "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";
+    public static String GOOGLE_CLIENT_SECRET = "";
 
     public static String GOOGLE_REDIRECT_URI = "http://localhost:9999/ComputerSale/LoginGoogleHandler";
 
